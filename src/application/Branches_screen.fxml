@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="457.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.input_screen">
+   <children>
+      <Pane prefHeight="472.0" prefWidth="544.0">
+         <children>
+            <Label layoutX="30.0" layoutY="14.0" prefHeight="37.0" prefWidth="450.0" text="The selected number of nodes">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="new_label" layoutX="30.0" layoutY="52.0" prefHeight="31.0" prefWidth="106.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="branches_listview" layoutX="30.0" layoutY="104.0" prefHeight="268.0" prefWidth="480.0" />
+            <Label layoutX="30.0" layoutY="433.0" prefHeight="25.0" prefWidth="41.0" text="from" />
+            <TextField fx:id="from_textField" layoutX="71.0" layoutY="433.0" prefHeight="25.0" prefWidth="61.0" promptText="0" />
+            <Label layoutX="147.0" layoutY="433.0" prefHeight="25.0" prefWidth="41.0" text="to" />
+            <TextField fx:id="to_textField" layoutX="168.0" layoutY="433.0" prefHeight="25.0" prefWidth="61.0" promptText="0" />
+            <Button fx:id="add_button" layoutX="355.0" layoutY="432.0" mnemonicParsing="false" onAction="#add_branch" prefHeight="25.0" prefWidth="89.0" text="add" />
+            <Button fx:id="clear_button" layoutX="39.0" layoutY="386.0" mnemonicParsing="false" onAction="#Delete_selected" prefHeight="25.0" prefWidth="89.0" text="clear selected" />
+            <Button fx:id="enter_button" layoutX="166.0" layoutY="386.0" mnemonicParsing="false" onAction="#finish" prefHeight="25.0" prefWidth="89.0" text="enter" />
+            <Label layoutX="241.0" layoutY="429.0" prefHeight="31.0" prefWidth="41.0" text="Gain" />
+            <TextField fx:id="gain_textField" layoutX="282.0" layoutY="432.0" onKeyPressed="#add_branch_key" prefHeight="25.0" prefWidth="61.0" promptText="0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
